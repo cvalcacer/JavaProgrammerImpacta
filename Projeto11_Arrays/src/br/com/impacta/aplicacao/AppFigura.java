@@ -9,12 +9,12 @@ public class AppFigura {
 	
 	public static void main(String[] args) {
 		
-		Retangulo ret = new Retangulo();
-		ret.setBase(10); 
-		ret.setAltura(15);
+		Retangulo ret = new Retangulo(10, 20);
+		//ret.setBase(10); 
+		//ret.setAltura(15);
 				
-		Circulo cir = new Circulo();
-		cir.setRaio(5);
+		Circulo cir = new Circulo(15);
+		//cir.setRaio(5);
 				
 		JOptionPane.showMessageDialog(null, ret.apresentarFigura());
 		JOptionPane.showMessageDialog(null, cir.apresentarFigura());

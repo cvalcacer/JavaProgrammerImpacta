@@ -4,7 +4,9 @@ import br.com.impacta.interfaces.Figura;
 
 public class Circulo implements Figura{
 	
-	//interface é implement e não extends
+	public Circulo(double raio) {
+		this.setRaio(raio);
+	}
 	
 	private double raio;
 		
@@ -23,6 +25,7 @@ public class Circulo implements Figura{
 		return Math.PI * Math.pow(this.getRaio(),2);
 				
 	}
+	
 	
 	
 	

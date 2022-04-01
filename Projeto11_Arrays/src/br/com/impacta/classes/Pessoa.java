@@ -3,7 +3,7 @@ package br.com.impacta.classes;
 import br.com.impacta.enumeracoes.Sexo;
 import br.com.impacta.interfaces.Documento;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements Comparable<Pessoa>{
 	
 	private String nome;
 	private int idade;
@@ -64,5 +64,13 @@ public abstract class Pessoa {
 				this.getDocumento().getNumero();
 				
 	}
+
+	@Override
+	public int compareTo(Pessoa o) {
+		
+		return this.getNome().compareTo(o.getNome());
+	}
+	
+	
 		
 }

@@ -5,6 +5,11 @@ import br.com.impacta.interfaces.Figura;
 public class Retangulo implements Figura{
 	
 	private double base, altura;
+	
+	public Retangulo(double base, double altura) {
+		this.setBase(base);
+		this.setAltura(altura);
+	}
 
 		public double getBase() {
 			return base;
@@ -26,6 +31,10 @@ public class Retangulo implements Figura{
 			
 			return this.getBase()*this.getAltura();
 		}
+
+		
+		
+		
 	
 
 }
