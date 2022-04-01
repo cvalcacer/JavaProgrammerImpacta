@@ -22,7 +22,7 @@ public class Utilitarios {
 		return removerEspacos(nome.toLowerCase()+"."+sobrenome.toLowerCase()+"@impacta.com.br");
 		}
 	
-	//escreva um metodo que receba um array e 
+	//escreva um metodo que receba um array e calcule a media de todos os itens somados
 	
 	public static double calcularMediaArray(double[] numeros) {
 		double soma = 0;
@@ -31,11 +31,17 @@ public class Utilitarios {
 			soma += numeros[i];			
 		}
 		
-		return soma / numeros.length;
+		return numeros.length > 0 ? soma / numeros.length : soma; //para não retornar nan
 	}
 	
+	//criando um novo método para calcular a media dos numeros com um novo metodo
+	//...varargs sempre vai considerar o array, método fica dinamico, pode receber tanto um quanto cinquenta
+	//o array vai ser criado quando o método for utilizado.
 	
+	public static double calcularMediaNumeros(double...numeros) {
+		return calcularMediaArray(numeros);
 	}
+}
 	
 	
 	

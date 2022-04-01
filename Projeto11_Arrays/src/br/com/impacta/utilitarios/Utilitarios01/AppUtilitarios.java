@@ -22,6 +22,18 @@ public class AppUtilitarios {
 		
 		System.out.println("Média dos elementos do array: " + media);
 		
+		//executando o metodo calcularMediaNumeros();
+		double m1 = Utilitarios.calcularMediaNumeros();
+		double m2 = Utilitarios.calcularMediaNumeros(2,3);
+		double m3 = Utilitarios.calcularMediaNumeros(4,5,6.9,7.8,1,2);
+		double m4 = Utilitarios.calcularMediaNumeros(lista);
+		
+		System.out.println("Média dos elementos do array: " + m1 +
+				"\nMédia dos elementos do array: " + m2 +
+				"\nMédia dos elementos do array: " + m3 +
+				"\nMédia dos elementos do array: " + m4);
+				
+		
 	}
 	
 
