@@ -1,2 +1,2 @@
 # JavaProgrammerImpacta
-Meus estudos durante o curso de Java Programmer ministrado pela Impacta!
+My Java studies during the Java Programmer 100h bootcamp @ Impacta! :D
