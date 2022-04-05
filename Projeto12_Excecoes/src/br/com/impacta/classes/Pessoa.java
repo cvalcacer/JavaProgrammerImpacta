@@ -23,7 +23,9 @@ public abstract class Pessoa implements Comparable<Pessoa>{
 		super();
 	}
 	
-		public Pessoa(String nome, int idade, Sexo sexo, Documento documento) {
+		public Pessoa(String nome, int idade, Sexo sexo, Documento documento)
+		//foi preciso colocar um throw aqui para subir a responsabilidade, agora vai quebrar nos filhos.
+		throws IllegalAccessException{
 			super();
 			
 			this.setNome(nome);
@@ -39,12 +41,27 @@ public abstract class Pessoa implements Comparable<Pessoa>{
 		}
 		public void setNome(String nome) {
 			this.nome = nome;
+			
+			//trim tira os espaços, método do object
+			if(nome == null || nome.trim().length() == 0) {
+				throw new IllegalArgumentException("O nome foi fornecido incorretamente");								
+			}
+			
+			
 		}
 		public int getIdade() {
 			return idade;
 		}
-		public void setIdade(int idade) {
+		
+		//throws IllegalAccessException, faz o jvm forçar a ter um try/catch de acordo com o nosso erro
+		public void setIdade(int idade) throws IllegalAccessException{
+			
+			if(idade < 0) {
+				throw new IllegalAccessException("A idade não pode ser negativa.");
+			}
+			
 			this.idade = idade;
+			
 		}
 		public Sexo getSexo() {
 			return sexo;

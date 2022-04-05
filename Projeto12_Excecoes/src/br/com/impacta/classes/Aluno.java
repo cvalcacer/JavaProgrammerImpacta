@@ -13,7 +13,7 @@ public class Aluno extends Pessoa {
 		super();
 	}
 	
-	public Aluno(String nome, int idade, Sexo sexo, int matricula, Curso curso, Documento documento) {
+	public Aluno(String nome, int idade, Sexo sexo, int matricula, Curso curso, Documento documento) throws IllegalAccessException {
 		super(nome, idade, sexo, documento);
 		this.setMatricula(matricula);
 		this.setCurso(curso);

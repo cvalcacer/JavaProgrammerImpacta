@@ -1,6 +1,8 @@
 package br.com.impacta.aplicacao;
 
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 import br.com.impacta.classes.DocumentoCNPJ;
 import br.com.impacta.classes.DocumentoCPF;
@@ -9,9 +11,11 @@ import br.com.impacta.enumeracoes.Sexo;
 
 public class AppPessoaDocumento {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IllegalAccessException, ClassNotFoundException, InstantiationException, UnsupportedLookAndFeelException {
 
-
+		//para o front usar o mesmo UI do sistema operacional
+		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		
 		Funcionario funcionario = new Funcionario();
 		funcionario.setNome("Neto Valcacer");
 		funcionario.setIdade(30);
