@@ -75,6 +75,17 @@ public class Curso implements Comparable<Curso> {
 					
 					
 			}
+
+			@Override
+			public int hashCode() {
+				
+				Double n = this.getPreco(); //autoboxing
+				
+				//empacotando um tipo primitivo dentro de um objeto.			
+				return this.getCodigo() + this.getDescricao().hashCode() + this.getCargaHoraria() 
+				+ n.hashCode();
+				
+			}
 	
 			
 			
