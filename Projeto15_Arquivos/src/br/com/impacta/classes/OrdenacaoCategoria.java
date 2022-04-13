@@ -6,7 +6,10 @@ public class OrdenacaoCategoria implements Comparator<Produto> {
 
 	@Override
 	public int compare(Produto prod1, Produto prod2) {
-		return prod1.getDescricao().compareTo(prod2.getDescricao());
+		
+		return prod1.getCategoria().compareTo(prod2.getCategoria());
+		
+		
 	}
-	
+
 }

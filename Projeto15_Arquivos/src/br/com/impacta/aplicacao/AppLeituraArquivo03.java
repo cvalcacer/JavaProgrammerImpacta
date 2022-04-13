@@ -2,17 +2,23 @@ package br.com.impacta.aplicacao;
 
 import java.io.FileReader;
 
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-public class AppLeituraArquivo02 {
-	
-public static void main(String[] args) {
+public class AppLeituraArquivo03 {
+
+	public static void main(String[] args) {
 		
-		try {
-			
+try {
+		
+		    JFileChooser chooser = new JFileChooser();
+		   
+		    if( chooser.showOpenDialog(null) == JFileChooser.CANCEL_OPTION) {
+		    	return;
+		    }	
+	
 			//Classe FileReader
-			FileReader  reader = 
-    new FileReader("C:\\Users\\virtual\\Documents\\Curso_Java\\Arquivos\\nomes.txt"); 
+			FileReader  reader =  new FileReader(chooser.getSelectedFile()); 
 			
 			//leitura do arquivo um caractere por vez.			
 			
@@ -44,6 +50,7 @@ public static void main(String[] args) {
 		
 		
 		
+
 	}
 
 }
